@@ -39,7 +39,6 @@ export class ContactosComponent implements OnInit {
   ngOnInit() {
     this.FormBusqueda = this.formBuilder.group({});
     this.FormRegistro = this.formBuilder.group({
-      IdContacto: [0],
       Nombre: [
         '',
         [
@@ -57,7 +56,7 @@ export class ContactosComponent implements OnInit {
           ),
         ],
       ],
-      Telefono: ['', [Validators.required, Validators.pattern('[0-9]{13}')]],
+      Telefono: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
     });
   }
 
@@ -112,11 +111,11 @@ export class ContactosComponent implements OnInit {
         arrFecha[0]
       ).toISOString();
 
-      this.contactosService.post(itemCopy).subscribe((res: any) => {
-        this.Volver();
-        this.modalDialogService.Alert('Registro agregado correctamente.');
-        this.Buscar();
-      });
+    this.contactosService.post(itemCopy).subscribe((res: any) => {
+      this.Volver();
+      this.modalDialogService.Alert('Registro agregado correctamente.');
+      this.Buscar();
+    });
   }
 
   Volver() {

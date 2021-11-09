@@ -11,7 +11,7 @@ import { Contacto } from '../models/contacto';
 export class ContactosService {
   resourceUrl: string;
   constructor(private httpClient: HttpClient) {
-    this.resourceUrl = 'https://pymes2021.azurewebsites.net/api/contactos/';
+    this.resourceUrl = 'https://pymes2021.azurewebsites.net/api/Contactos/';
   }
 
   getById(Id: number) {
