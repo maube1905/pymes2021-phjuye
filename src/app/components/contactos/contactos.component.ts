@@ -56,7 +56,7 @@ export class ContactosComponent implements OnInit {
           ),
         ],
       ],
-      Telefono: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
+      Telefono: ['', [Validators.required, Validators.pattern('[0-9]{9}')]],
     });
   }
 
