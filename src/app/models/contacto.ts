@@ -1,6 +1,6 @@
 export interface Contacto {
   IdContacto: number;
   Nombre: string;
-  FechaDeNacimiento: string;
+  FechaNacimiento: string;
   Telefono: number;
 }

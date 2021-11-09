@@ -31,6 +31,7 @@ import { DatePickerAdapterISO } from './shared/DatePickerAdapterISO';
 import { DatePickerParserFormatter } from './shared/DatePickerParserFormater';
 import { DatePickerSpanish } from './shared/DatePickerSpanish';
 import { FormFocusDirective } from './shared/form-focus.directive';
+import { ContactosService } from './services/contactos.service';
 
 @NgModule({
   imports: [
@@ -87,6 +88,7 @@ import { FormFocusDirective } from './shared/form-focus.directive';
   ],
   entryComponents: [ModalDialogComponent],
   providers: [
+    ContactosService,
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true },
 
